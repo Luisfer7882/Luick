@@ -15,18 +15,10 @@ class servo():
 	j=2.5
 
 	while True: 
-
 	    try:                 
 	        while  j<=11.17:
-
 		    j=j+k
 	            self.p.ChangeDutyCycle(j)    
         	    time.sleep(0.5)           
 		    print j
-	        j=2.5
-    def mover.servo(self, DutyCycle):
-      self.p.ChangeDutyCycle(DutyCycle)  	
-
-            except KeyboardInterrupt:         
-	        p.stop()                     
-   	        GPIO.cleanup()                
+     	            j=2.5

@@ -1,4 +1,4 @@
-from Servo1 import servo
+from Servo2 import servo
 from lidar_lite import Lidar_Lite
 
 lidar=Lidar_Lite()

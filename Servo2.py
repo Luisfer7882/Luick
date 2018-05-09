@@ -10,6 +10,15 @@ class servo():
 	self.p = GPIO.PWM(21,50)        #Ponemos el pin 21 en modo PWM y enviamos 50 pulsos por segundo
 	self.p.start(7.5)               
 
+    def move(self, degrees):
+	deg=0.04816666667
+	k=0.4335
+	j=2.5
+	#print degrees
+	dutycycle = j + (degrees*deg)
+	self.p.ChangeDutyCycle(dutycycle)
+	time.sleep(0.5)
+	
     def scan(self):
 	k=0.4335
 	j=2.5
@@ -20,10 +29,10 @@ class servo():
 	        while  j<=11.17:
 
 		    j=j+k
-	            self.p.ChangeDutyCycle(j)    
+	            #print j
+                    self.p.ChangeDutyCycle(j)    
         	    time.sleep(0.5)           
-		    print j
-	        j=2.5
+		   
 	
 
             except KeyboardInterrupt:         

@@ -56,11 +56,11 @@ class Lidar_Lite():
 
   def writeAndWait(self, register, value):
     self.bus.write_byte_data(self.address, register, value);
-    time.sleep(0.02)
+    time.sleep(1)
 
   def readAndWait(self, register):
     res = self.bus.read_byte_data(self.address, register)
-    time.sleep(0.02)
+    time.sleep(1)
     return res
 
   def read_reg(self, reg):
